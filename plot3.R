@@ -14,12 +14,11 @@ plot3 <- function() {
     plot(
       DateTime,
       Sub_metering_1,
-      type = "n",
+      type = "l",
       ylab = "Energy sub metering",
       xlab = ""
     )
   )
-  lines(data$DateTime, data$Sub_metering_1)
   lines(data$DateTime, data$Sub_metering_2, col = "red")
   lines(data$DateTime, data$Sub_metering_3, col = "blue")
   legend(

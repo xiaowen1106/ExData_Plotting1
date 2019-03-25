@@ -14,12 +14,11 @@ plot2 <- function() {
     plot(
       DateTime,
       Global_active_power,
-      type = "n",
+      type = "l",
       ylab = "Global Active Power (kilowatts)",
       xlab = ""
     )
   )
-  lines(data$DateTime, data$Global_active_power)
   
   # Shutting down the Graphic Device.
   dev.off()

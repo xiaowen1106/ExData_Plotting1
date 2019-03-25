@@ -17,12 +17,11 @@ plot4 <- function() {
     plot(
       DateTime,
       Global_active_power,
-      type = "n",
+      type = "l",
       ylab = "Global Active Power (kilowatts)",
       xlab = ""
     )
   )
-  lines(data$DateTime, data$Global_active_power)
   
   # Plotting the energy usage by DateTime for each sub-metering.
   with(
@@ -30,12 +29,11 @@ plot4 <- function() {
     plot(
       DateTime,
       Sub_metering_1,
-      type = "n",
+      type = "l",
       ylab = "Energy sub metering",
       xlab = ""
     )
   )
-  lines(data$DateTime, data$Sub_metering_1)
   lines(data$DateTime, data$Sub_metering_2, col = "red")
   lines(data$DateTime, data$Sub_metering_3, col = "blue")
   legend(
@@ -51,12 +49,11 @@ plot4 <- function() {
     plot(
       DateTime,
       Voltage,
-      type = "n",
+      type = "l",
       ylab = "Voltage",
       xlab = "datetime"
     )
   )
-  lines(data$DateTime, data$Voltage)
   
   # Plotting the gloabl reactive power by datetime.
   with(
@@ -64,12 +61,11 @@ plot4 <- function() {
     plot(
       DateTime,
       Global_reactive_power,
-      type = "n",
+      type = "l",
       ylab = "Global_reactive_power",
       xlab = "datetime"
     )
   )
-  lines(data$DateTime, data$Global_reactive_power)
   
   # Shutting down the Graphic Device.
   dev.off()
